@@ -1,47 +1,90 @@
-# LiveCodeBench / Orchestra-o1 测评代码
+# LiveCodeBench / Orchestra-O1
 
-本文件夹可独立复制使用，包含所需的框架源码、运行入口、配置示例和工具容器定义，不依赖另一个基准目录。
+使用 O1 主、子智能体解决编程题，将最终 Python 程序提交给独立容器，使用官方判题器测试。解题工具只能接触公开题目与样例，私有测试仅交给判题器。
 
-先进入本目录：`cd livecodebench`。不包含数据集、模型权重、密钥、轨迹或实验输出。
+## 文件说明
 
-## 运行环境
+| 文件 | 用途 |
+| --- | --- |
+| `run_lcb_o1.py` | 主子模型调度、代码工具、检查点恢复与判题控制 |
+| `lcb_team_base.py` | 对原 O1 框架的工具反馈与模型调用适配 |
+| `lcb_judge.py` | 隔离判题包装器 |
+| `testing_util.py` | 保留的官方判题器源码 |
+| `token_gate_selftest.py` | 不调用模型的并发准入测试 |
+| `framework/` / `shared/` | 框架核心与环境配置 |
 
-Linux、Python 3.12、Docker Engine、可调用的两个 OpenAI-compatible 本地模型服务。模型服务与评测 Python 环境可分开安装。
+## 环境准备
+
+需要 Linux、Python 3.12、Docker Engine，以及两个可访问的本地模型服务。先进入本文件夹，再执行：
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+docker info
 docker build -f Dockerfile.tools -t o1-eval-tools:share .
 cp .env.example .env
-# 修改 .env 中自己的路径、端点，然后：
+# 编辑 .env，填写自己的绝对路径与模型接口，然后加载：
 source .env
 ```
 
-历史配置：LCB 主模型 40960 / 子模型 65536 上下文，主输出8192 / 子输出4096；HLE双方65536上下文，主输出16384 / 子输出8192。
-主模型 HLE 64K 使用 Qwen3 YaRN factor=2；不要将它套用于其他架构。上下文预检和 KV admission budget 必须按新服务器实测。
+主要配置项：
 
-## LiveCodeBench
+| 变量 | 含义 |
+| --- | --- |
+| `O1_EVAL_ROOT` | 本地运行目录，建议使用绝对路径 |
+| `O1_MAIN_MODEL_PATH` | 主模型本地权重或 tokenizer 路径 |
+| `O1_SUB_MODEL_PATH` | 子模型本地权重或 tokenizer 路径 |
+| `O1_MAIN_URL` / `O1_SUB_URL` | 两个 OpenAI-compatible 服务的 `/v1` 地址 |
+| `O1_LOCAL_API_KEY` | 本地模型服务使用的访问密钥 |
+| `O1_TOOL_IMAGE` | 运行代码工具的 Docker 镜像名称 |
 
-官方下载仓库： https://huggingface.co/datasets/livecodebench/code_generation_lite
+本版本请求中的模型名称固定为 `Orchestra-o1-8B-all-ourdata` 和 `Qwen3-Omni-30B-A3B-Instruct`，服务端须提供对应别名。更换模型还须核对 tokenizer、上下文、采样配置和动作协议，不能只改 URL。
 
-固定数据版本 `0fe84c3912ea0c4d4a78037083943e8f0c4dd505`（release_v6）。官方判题器版本 `28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24`。
-本包保留官方 `testing_util.py`，不包含题目和测试。
-在 `$O1_EVAL_ROOT/lcb-service/full-v6-r2/` 准备：
+## 准备官方数据
 
-- `data/public.json`：官方六个 JSONL 文件顺序拼接后去除 private_test_cases 的1055行；
-- `data/private/<platform>-<question_id>.json`：各行原始字节（含行尾），只允许隔离判题器读取；
-- `data/manifest.json`：public_sha256、files（各文件 name/count/bytes/sha256），全部通过校验后写入 `data/READY`；
-- 将本文件夹下的 `run_lcb_o1.py`、`lcb_team_base.py`、`lcb_judge.py`、`testing_util.py` 四个运行文件复制到该运行目录，供指纹检查和 Docker 挂载；
-- `$O1_EVAL_ROOT/lcb-service/services/services.json`：连接检查状态，phase=ready，services.sub.context=65536。它不是启动模型的命令，两个端点须真实可用。
+- 数据来源：[LiveCodeBench code_generation_lite](https://huggingface.co/datasets/livecodebench/code_generation_lite)。
+- 本版本面向 `release_v6`，共 1,055 题。
+- 固定数据修订：`0fe84c3912ea0c4d4a78037083943e8f0c4dd505`。
+- 官方判题器修订：`28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24`。
 
-确认上述条件后 `bash run.sh`。代码先执行合成输入、错误程序、隐藏测试隔离及真实主子模型调用预检，断言失败则不开始全量测评。
-保留未通过题目在分母；接口/容器故障单列。历史184/249=73.9%是冻结时部分题成绩，不是1055题全量成绩；非每题都委派Omni。
+仓库不附数据下载结果或现成数据清单。自行获取官方六个 JSONL 文件后，在 `$O1_EVAL_ROOT/lcb-service/full-v6-r2/` 准备以下结构：
 
-## 注意
+```text
+full-v6-r2/
+├── run_lcb_o1.py
+├── lcb_team_base.py
+├── lcb_judge.py
+├── testing_util.py
+└── data/
+    ├── public.json
+    ├── private/<platform>-<question_id>.json
+    ├── manifest.json
+    └── READY
+```
 
-- Docker用于运行不可信模型代码，默认无网络、只读根目录、内存/CPU/PID限制；不要挂载宿主私有数据目录。
-- 没有包含自动清理显卡、停止他人任务、下载权重或付费API启动逻辑。
-- 不要把 `.env`、runtime、题目、答案、私有测试及模型权重提交到 Git。
-- 本包仅做源码语法、文件清单和敏感信息检查；没有在新的硬件与模型组合上重跑基准。
-- 上游源码和判题器权利归原作者；本包不擅自重新授予第三方代码许可证。建议私有仓库内进行团队复核。
+将本文件夹对应的四个 Python 文件复制到上面的运行目录，供指纹检查和容器挂载使用。
+
+`public.json` 按官方六个文件顺序拼接全部题目，并去掉 `private_test_cases`；`private/` 保存每题原始行字节（含行尾）。`manifest.json` 必须包含 `public_sha256` 和 `files`，每个源文件记录 `name`、`count`、`bytes`、`sha256`；完成完整性校验后才创建 `READY`。详细校验逻辑见 `run_lcb_o1.py`。
+
+模型服务就绪后，在 `$O1_EVAL_ROOT/lcb-service/services/services.json` 记录 `phase: ready` 和 `services.sub.context: 65536`。此文件只是状态记录，不能替代真实的模型服务。不要用虚假就绪状态跳过部署检查。
+
+## 启动与查看结果
+
+```bash
+bash run.sh
+```
+
+运行前会检查标准输入、文件持久化、隐藏测试隔离、正确与错误程序，并实际调用原 O1 主子智能体。预检失败不会启动全量任务。
+
+主要输出位于运行目录：`status.json` 保存进度和结果；`results/` 保存每题事件、轨迹、最终程序与判题记录。基础设施错误与正常解题失败分别记录，0分题保留在分母。
+
+历史配置为主模型 40,960、子模型 65,536 上下文，单次输出上限分别为 8,192 / 4,096 tokens。并发数与 KV 预算须按实际服务容量设置，不能照搬原服务器的显存预留值。
+
+## 结果口径与限制
+
+这是单次提交的 agentic pass@1，不等同于官方原生模型榜单的生成协议。主模型可以直接提交，并非每题都调用 Omni。
+
+历史冻结时完成 249/1,055 题，其中 184 题通过，已完成部分通过率约 73.9%；这是阶段结果，不代表全量成绩。原远程实验目录已删除，此处为本地保留源码，尚未在迁移后的环境中重新验证全流程。
+
+工具和判题容器默认无网络、只读根目录并限制 CPU、内存及 PID。不要将私有数据目录额外挂载给解题容器，也不要将运行数据或凭证提交到仓库。
