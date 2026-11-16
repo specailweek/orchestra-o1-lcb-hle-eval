@@ -2,267 +2,380 @@
   "contains_dataset": false,
   "contains_model_weights": false,
   "contains_credentials": false,
+  "layout": "two independent benchmark folders",
   "validation": "Python AST syntax and credential-pattern audit; no model or paid API calls",
   "files": [
     {
-      "path": "framework/base/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "8b6aab1c6e50cdd35234d36f256c6517516b67a7497ba4646e78712bf207999c"
-    },
-    {
-      "path": "framework/base/agent/base_action.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "c4a57de62affa5a577ce9656c729bb23b91e958f61a1a01902bb1a5330995ab4"
-    },
-    {
-      "path": "framework/base/agent/base_agent.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "6da2583406eb56e41ddfcb2a6c7ca25c09a1cd714203beddf60dc71d200d7cef"
-    },
-    {
-      "path": "framework/base/agent/memory.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "91d2faf8a38f053e15201f1f7d64a114fc7cf0fb3ff048f59a1c73c43cb49e3c"
-    },
-    {
-      "path": "framework/base/agent/react_agent.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "f2b0dca304e005cce7d41fea24cf0da6cf8a3a50d4fc5bd1e8351cb9cc474d2f"
-    },
-    {
-      "path": "framework/base/agent/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "db70a2577cbb0a88a30cd7a1fb55843951b159f0d6815ab011c86b3658c9642e"
-    },
-    {
-      "path": "framework/base/engine/async_llm.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "a7bbfb2d64a418971c518db697ace49b43c4476ac7ea5fdafe09093c505b430f"
-    },
-    {
-      "path": "framework/base/engine/cost_monitor.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "14c5d11fa5cb818e694d985f089bc449f131d0e82594f679773b5be0fb65940a"
-    },
-    {
-      "path": "framework/base/engine/logs.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "b8338075a816a2299967b0101a6f3da9dc71a412231999c37110e21c45baff9c"
-    },
-    {
-      "path": "framework/base/engine/utils.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "3afca5cfcc0c6f56ecd709eb476299dd215b0da2ca521223299d04b7f3c7c5fc"
-    },
-    {
-      "path": "framework/base/engine/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "da90fe5905c6d9a94f8391dbde022941b86eb1fed9e88ed59082f11a5d4337a0"
-    },
-    {
-      "path": "framework/benchmark/common/env.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "58ecfa761b67ebc2637982c90466f36d118c998f34d66c1eaabb2263a95a6dd6"
-    },
-    {
-      "path": "framework/benchmark/common/incremental_runner.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "b74ab8986a423b169e03397e7c8a611e80313707676be0b0a07098e2498f5f31"
-    },
-    {
-      "path": "framework/benchmark/common/runner.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "95a2faa2bad921ee86c8a031f64e4069fe125c4208d4126d8608f0127d4d6bc3"
-    },
-    {
-      "path": "framework/benchmark/common/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "a51f6f8c394bc754b418715338f27cc5a740d5c25a614e12fa42ccead2b2dd3a"
-    },
-    {
-      "path": "framework/orchestra_o1/config.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "b13fe084074463aab53f96120ba9a373811d6120f594e87187430fea65e89850"
-    },
-    {
-      "path": "framework/orchestra_o1/main_agent.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "f68055c51aaa424d0ec9927d30ec4ae3328fb257f4245fe6b4718f2ea578371e"
-    },
-    {
-      "path": "framework/orchestra_o1/sub_agent.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "9d3531f6e299876aac4e6cfce00b2a130efa188d059064704c244d8e916720b5"
-    },
-    {
-      "path": "framework/orchestra_o1/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "fed6598346b4909747a962988a7e4a4b2aa541a858970f5e388dea8c8ccf4ecc"
-    },
-    {
-      "path": "framework/orchestra_o1/common/utils.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "66a861b6549a1e07c04c77267a4c251a283bf089d3eb6da483644d65db28e99b"
-    },
-    {
-      "path": "framework/orchestra_o1/common/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "8ef35f9417dace7d4a26395740675d2315fa30365b5185cc0ed56c533f8914d5"
-    },
-    {
-      "path": "framework/orchestra_o1/prompts/gaia.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "cca3bfe976f12c03e36250d3e2630aa3e556122037231afcc3b1dd5f91e33700"
-    },
-    {
-      "path": "framework/orchestra_o1/prompts/omnigaia.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "4866a46d78a6b37f71d6e4011482b4cc9a1868787c3641ebbb8f0d4c08c839bf"
-    },
-    {
-      "path": "framework/orchestra_o1/prompts/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "265cb1ff3859b4eec424b0ba9310f5670bd8c4ac7b432e177cba20723dde5ecc"
-    },
-    {
-      "path": "framework/orchestra_o1/runners/gaia_runner.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "8a2c975911e448773c081576a70004b4b7a7e7c7f7004e96889df9fe8613b1c8"
-    },
-    {
-      "path": "framework/orchestra_o1/runners/omnigaia_runner.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "dd11eb760b3a9086efdf4e8f9bbacd2ec94ac5fb9a9031409a758b9ef268135e"
-    },
-    {
-      "path": "framework/orchestra_o1/runners/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "d4df8ea9d3d5c412c0de0c2d3e54c73d905206005fb88b1085759b7ccf3f0c04"
-    },
-    {
-      "path": "framework/orchestra_o1/subagents/react_agent.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "142e590cee7b4e9c3beb3c437e0e29d79f6c902bda42a08c31353c6f88a475d2"
-    },
-    {
-      "path": "framework/orchestra_o1/subagents/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "c5a4a2cb30a4b14a7058e15dcb138116e190a0f2dffb3ba448b5eb30b217e36a"
-    },
-    {
-      "path": "framework/orchestra_o1/tools/complete.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "713027fa76612f1daac85272a71bf56f3c54c80a43a7c29cc06be3ede88c5162"
-    },
-    {
-      "path": "framework/orchestra_o1/tools/delegate.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "b818cb7a35a3a05212368ee6708fc2c920482881c0b87d06bb0cade63d0eb337"
-    },
-    {
-      "path": "framework/orchestra_o1/tools/trace_formatter.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "deab861573cc35e8a7e60c3c0ba5929f85f4e1fc5b724cd4861b474040523241"
-    },
-    {
-      "path": "framework/orchestra_o1/tools/__init__.py",
-      "source": "local Orchestra-o1 source snapshot",
-      "sha256": "84c73f032161b6045936cc243f1a3a916ded776ee8941a2f0814ee69ed5856d4"
-    },
-    {
-      "path": "framework/benchmark/__init__.py",
-      "source": "new share helper",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "shared/share_settings.py",
-      "source": "new share helper",
-      "sha256": "019d4e8909cec4bd6b1da0b411205a738352725e0bd3c672c37cc390294604a7"
-    },
-    {
-      "path": "livecodebench/run_lcb_o1.py",
-      "source": "local final LCB source copy; remote run was deleted",
-      "sha256": "bc1cd239ba2519e0d6cfa30254b3f11f87cd4e6ad4974c97375549c8cee1babd"
-    },
-    {
-      "path": "livecodebench/lcb_team_base.py",
-      "source": "local final LCB source copy; remote run was deleted",
-      "sha256": "8d8676fe52ad55e08da74986a362b949fd20b72a3987debbbaab2cd08870d971"
-    },
-    {
-      "path": "livecodebench/lcb_judge.py",
-      "source": "local final LCB source copy; remote run was deleted",
-      "sha256": "43c95b841e93b735f9584624ffe224268c8d39f04df0a1f7df00bf091ad96820"
-    },
-    {
-      "path": "livecodebench/testing_util.py",
-      "source": "LiveCodeBench upstream checker 28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24; preserved unmodified",
-      "sha256": "b7cb6a8a69807bb868150a61742e25d7bb5328bbe01d514471b6ec43c9fa9ed2"
-    },
-    {
-      "path": "hle/run_hle_o1.py",
-      "source": "local HLE r2 64K source copy; paths/credentials made configurable",
-      "sha256": "8295399de4af2d99af7e46c89036e51b5d663d60f20e06f91bec32c4c0b1839d"
-    },
-    {
-      "path": "hle/hle_runtime.py",
-      "source": "local HLE r2 64K source copy; paths/credentials made configurable",
-      "sha256": "2b590a3548b52f499107c8f068bfa57cbe4f14878b1e9440979c54583d0dad59"
-    },
-    {
-      "path": "hle/hle_team_base.py",
-      "source": "local HLE r2 64K source copy; paths/credentials made configurable",
-      "sha256": "dce914a00ffc649021b565fd3325376095f8d79f5fa669157fc296f00692f2e7"
-    },
-    {
-      "path": "hle/hle_schemas.py",
-      "source": "local HLE r2 64K source copy; paths/credentials made configurable",
-      "sha256": "3a88cc758381a74d257e9a04011397ca666e757167e9b4a67667e1f7e65e9762"
-    },
-    {
-      "path": "hle/hle_judge.py",
-      "source": "local HLE r2 64K source copy; paths/credentials made configurable",
-      "sha256": "3cfa901fa07d11aa5ea0c5fe532f4b9dd7b2de4d8fa14c747f9c174b4bdf3c77"
-    },
-    {
-      "path": "hle/stratified_sample.py",
-      "source": "gold-free stratified selection implementation",
-      "sha256": "e7760b465b3a6021cd54e02618c76a70aa95c2e1918219b81d70c1658550b540"
-    },
-    {
-      "path": "livecodebench/token_gate_selftest.py",
-      "source": "new share helper",
-      "sha256": "1841b39b4b0e6462062cb2b3c98c149270028a21722c386adb9dc6db63a16cb6"
-    },
-    {
       "path": ".gitignore",
-      "source": "new share helper",
       "sha256": "92c2416f5bc0e347f485a333edd8bb4e66f3d98f5cf75ddaeb342c397ff91f45"
     },
     {
-      "path": ".env.example",
-      "source": "new share helper",
+      "path": "hle/.env.example",
       "sha256": "86b60018813debe283d750ff61e6eb6ec6be36afc1e0bab028c2854c9968f177"
     },
     {
-      "path": "requirements.txt",
-      "source": "new share helper",
-      "sha256": "a49fbd175df6f7abfee73f180f5e71c173b370b3082c74314dbd4e155eb9d1b1"
-    },
-    {
-      "path": "Dockerfile.tools",
-      "source": "new share helper",
+      "path": "hle/Dockerfile.tools",
       "sha256": "029b83a46d3323dfe2594746d4372b2cecd3194a934cd655f7964a53dee89cf2"
     },
     {
-      "path": "run.sh",
-      "source": "new share helper",
-      "sha256": "6850e29ecfb9842ef17b083f0b25547dc8deb17da5db11e34adf1631ea942e2f"
+      "path": "hle/framework/base/__init__.py",
+      "sha256": "8b6aab1c6e50cdd35234d36f256c6517516b67a7497ba4646e78712bf207999c"
+    },
+    {
+      "path": "hle/framework/base/agent/__init__.py",
+      "sha256": "db70a2577cbb0a88a30cd7a1fb55843951b159f0d6815ab011c86b3658c9642e"
+    },
+    {
+      "path": "hle/framework/base/agent/base_action.py",
+      "sha256": "c4a57de62affa5a577ce9656c729bb23b91e958f61a1a01902bb1a5330995ab4"
+    },
+    {
+      "path": "hle/framework/base/agent/base_agent.py",
+      "sha256": "6da2583406eb56e41ddfcb2a6c7ca25c09a1cd714203beddf60dc71d200d7cef"
+    },
+    {
+      "path": "hle/framework/base/agent/memory.py",
+      "sha256": "91d2faf8a38f053e15201f1f7d64a114fc7cf0fb3ff048f59a1c73c43cb49e3c"
+    },
+    {
+      "path": "hle/framework/base/agent/react_agent.py",
+      "sha256": "f2b0dca304e005cce7d41fea24cf0da6cf8a3a50d4fc5bd1e8351cb9cc474d2f"
+    },
+    {
+      "path": "hle/framework/base/engine/__init__.py",
+      "sha256": "da90fe5905c6d9a94f8391dbde022941b86eb1fed9e88ed59082f11a5d4337a0"
+    },
+    {
+      "path": "hle/framework/base/engine/async_llm.py",
+      "sha256": "a7bbfb2d64a418971c518db697ace49b43c4476ac7ea5fdafe09093c505b430f"
+    },
+    {
+      "path": "hle/framework/base/engine/cost_monitor.py",
+      "sha256": "14c5d11fa5cb818e694d985f089bc449f131d0e82594f679773b5be0fb65940a"
+    },
+    {
+      "path": "hle/framework/base/engine/logs.py",
+      "sha256": "b8338075a816a2299967b0101a6f3da9dc71a412231999c37110e21c45baff9c"
+    },
+    {
+      "path": "hle/framework/base/engine/utils.py",
+      "sha256": "3afca5cfcc0c6f56ecd709eb476299dd215b0da2ca521223299d04b7f3c7c5fc"
+    },
+    {
+      "path": "hle/framework/benchmark/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hle/framework/benchmark/common/__init__.py",
+      "sha256": "a51f6f8c394bc754b418715338f27cc5a740d5c25a614e12fa42ccead2b2dd3a"
+    },
+    {
+      "path": "hle/framework/benchmark/common/env.py",
+      "sha256": "58ecfa761b67ebc2637982c90466f36d118c998f34d66c1eaabb2263a95a6dd6"
+    },
+    {
+      "path": "hle/framework/benchmark/common/incremental_runner.py",
+      "sha256": "b74ab8986a423b169e03397e7c8a611e80313707676be0b0a07098e2498f5f31"
+    },
+    {
+      "path": "hle/framework/benchmark/common/runner.py",
+      "sha256": "95a2faa2bad921ee86c8a031f64e4069fe125c4208d4126d8608f0127d4d6bc3"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/__init__.py",
+      "sha256": "fed6598346b4909747a962988a7e4a4b2aa541a858970f5e388dea8c8ccf4ecc"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/common/__init__.py",
+      "sha256": "8ef35f9417dace7d4a26395740675d2315fa30365b5185cc0ed56c533f8914d5"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/common/utils.py",
+      "sha256": "66a861b6549a1e07c04c77267a4c251a283bf089d3eb6da483644d65db28e99b"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/config.py",
+      "sha256": "b13fe084074463aab53f96120ba9a373811d6120f594e87187430fea65e89850"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/main_agent.py",
+      "sha256": "f68055c51aaa424d0ec9927d30ec4ae3328fb257f4245fe6b4718f2ea578371e"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/prompts/__init__.py",
+      "sha256": "265cb1ff3859b4eec424b0ba9310f5670bd8c4ac7b432e177cba20723dde5ecc"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/prompts/gaia.py",
+      "sha256": "cca3bfe976f12c03e36250d3e2630aa3e556122037231afcc3b1dd5f91e33700"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/prompts/omnigaia.py",
+      "sha256": "4866a46d78a6b37f71d6e4011482b4cc9a1868787c3641ebbb8f0d4c08c839bf"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/runners/__init__.py",
+      "sha256": "d4df8ea9d3d5c412c0de0c2d3e54c73d905206005fb88b1085759b7ccf3f0c04"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/runners/gaia_runner.py",
+      "sha256": "8a2c975911e448773c081576a70004b4b7a7e7c7f7004e96889df9fe8613b1c8"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/runners/omnigaia_runner.py",
+      "sha256": "dd11eb760b3a9086efdf4e8f9bbacd2ec94ac5fb9a9031409a758b9ef268135e"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/sub_agent.py",
+      "sha256": "9d3531f6e299876aac4e6cfce00b2a130efa188d059064704c244d8e916720b5"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/subagents/__init__.py",
+      "sha256": "c5a4a2cb30a4b14a7058e15dcb138116e190a0f2dffb3ba448b5eb30b217e36a"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/subagents/react_agent.py",
+      "sha256": "142e590cee7b4e9c3beb3c437e0e29d79f6c902bda42a08c31353c6f88a475d2"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/tools/__init__.py",
+      "sha256": "84c73f032161b6045936cc243f1a3a916ded776ee8941a2f0814ee69ed5856d4"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/tools/complete.py",
+      "sha256": "713027fa76612f1daac85272a71bf56f3c54c80a43a7c29cc06be3ede88c5162"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/tools/delegate.py",
+      "sha256": "b818cb7a35a3a05212368ee6708fc2c920482881c0b87d06bb0cade63d0eb337"
+    },
+    {
+      "path": "hle/framework/orchestra_o1/tools/trace_formatter.py",
+      "sha256": "deab861573cc35e8a7e60c3c0ba5929f85f4e1fc5b724cd4861b474040523241"
+    },
+    {
+      "path": "hle/hle_judge.py",
+      "sha256": "3cfa901fa07d11aa5ea0c5fe532f4b9dd7b2de4d8fa14c747f9c174b4bdf3c77"
+    },
+    {
+      "path": "hle/hle_runtime.py",
+      "sha256": "2b590a3548b52f499107c8f068bfa57cbe4f14878b1e9440979c54583d0dad59"
+    },
+    {
+      "path": "hle/hle_schemas.py",
+      "sha256": "3a88cc758381a74d257e9a04011397ca666e757167e9b4a67667e1f7e65e9762"
+    },
+    {
+      "path": "hle/hle_team_base.py",
+      "sha256": "dce914a00ffc649021b565fd3325376095f8d79f5fa669157fc296f00692f2e7"
+    },
+    {
+      "path": "hle/README.md",
+      "sha256": "5a57acc9e9fa9c74a19c0fa5228a3a94603f038824cc62534df660f0ee924c11"
+    },
+    {
+      "path": "hle/requirements.txt",
+      "sha256": "a49fbd175df6f7abfee73f180f5e71c173b370b3082c74314dbd4e155eb9d1b1"
+    },
+    {
+      "path": "hle/run.sh",
+      "sha256": "a915ea8d0681fbdc20184c3c7f43f77a5187249fdcf07942efeac8069bd70f0a"
+    },
+    {
+      "path": "hle/run_hle_o1.py",
+      "sha256": "8295399de4af2d99af7e46c89036e51b5d663d60f20e06f91bec32c4c0b1839d"
+    },
+    {
+      "path": "hle/shared/share_settings.py",
+      "sha256": "019d4e8909cec4bd6b1da0b411205a738352725e0bd3c672c37cc390294604a7"
+    },
+    {
+      "path": "hle/stratified_sample.py",
+      "sha256": "e7760b465b3a6021cd54e02618c76a70aa95c2e1918219b81d70c1658550b540"
+    },
+    {
+      "path": "livecodebench/.env.example",
+      "sha256": "77b0c1b2362dfe2363b516a00c8ddc18552e764a97cc17e7872fae12a3d1ca94"
+    },
+    {
+      "path": "livecodebench/Dockerfile.tools",
+      "sha256": "029b83a46d3323dfe2594746d4372b2cecd3194a934cd655f7964a53dee89cf2"
+    },
+    {
+      "path": "livecodebench/framework/base/__init__.py",
+      "sha256": "8b6aab1c6e50cdd35234d36f256c6517516b67a7497ba4646e78712bf207999c"
+    },
+    {
+      "path": "livecodebench/framework/base/agent/__init__.py",
+      "sha256": "db70a2577cbb0a88a30cd7a1fb55843951b159f0d6815ab011c86b3658c9642e"
+    },
+    {
+      "path": "livecodebench/framework/base/agent/base_action.py",
+      "sha256": "c4a57de62affa5a577ce9656c729bb23b91e958f61a1a01902bb1a5330995ab4"
+    },
+    {
+      "path": "livecodebench/framework/base/agent/base_agent.py",
+      "sha256": "6da2583406eb56e41ddfcb2a6c7ca25c09a1cd714203beddf60dc71d200d7cef"
+    },
+    {
+      "path": "livecodebench/framework/base/agent/memory.py",
+      "sha256": "91d2faf8a38f053e15201f1f7d64a114fc7cf0fb3ff048f59a1c73c43cb49e3c"
+    },
+    {
+      "path": "livecodebench/framework/base/agent/react_agent.py",
+      "sha256": "f2b0dca304e005cce7d41fea24cf0da6cf8a3a50d4fc5bd1e8351cb9cc474d2f"
+    },
+    {
+      "path": "livecodebench/framework/base/engine/__init__.py",
+      "sha256": "da90fe5905c6d9a94f8391dbde022941b86eb1fed9e88ed59082f11a5d4337a0"
+    },
+    {
+      "path": "livecodebench/framework/base/engine/async_llm.py",
+      "sha256": "a7bbfb2d64a418971c518db697ace49b43c4476ac7ea5fdafe09093c505b430f"
+    },
+    {
+      "path": "livecodebench/framework/base/engine/cost_monitor.py",
+      "sha256": "14c5d11fa5cb818e694d985f089bc449f131d0e82594f679773b5be0fb65940a"
+    },
+    {
+      "path": "livecodebench/framework/base/engine/logs.py",
+      "sha256": "b8338075a816a2299967b0101a6f3da9dc71a412231999c37110e21c45baff9c"
+    },
+    {
+      "path": "livecodebench/framework/base/engine/utils.py",
+      "sha256": "3afca5cfcc0c6f56ecd709eb476299dd215b0da2ca521223299d04b7f3c7c5fc"
+    },
+    {
+      "path": "livecodebench/framework/benchmark/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "livecodebench/framework/benchmark/common/__init__.py",
+      "sha256": "a51f6f8c394bc754b418715338f27cc5a740d5c25a614e12fa42ccead2b2dd3a"
+    },
+    {
+      "path": "livecodebench/framework/benchmark/common/env.py",
+      "sha256": "58ecfa761b67ebc2637982c90466f36d118c998f34d66c1eaabb2263a95a6dd6"
+    },
+    {
+      "path": "livecodebench/framework/benchmark/common/incremental_runner.py",
+      "sha256": "b74ab8986a423b169e03397e7c8a611e80313707676be0b0a07098e2498f5f31"
+    },
+    {
+      "path": "livecodebench/framework/benchmark/common/runner.py",
+      "sha256": "95a2faa2bad921ee86c8a031f64e4069fe125c4208d4126d8608f0127d4d6bc3"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/__init__.py",
+      "sha256": "fed6598346b4909747a962988a7e4a4b2aa541a858970f5e388dea8c8ccf4ecc"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/common/__init__.py",
+      "sha256": "8ef35f9417dace7d4a26395740675d2315fa30365b5185cc0ed56c533f8914d5"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/common/utils.py",
+      "sha256": "66a861b6549a1e07c04c77267a4c251a283bf089d3eb6da483644d65db28e99b"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/config.py",
+      "sha256": "b13fe084074463aab53f96120ba9a373811d6120f594e87187430fea65e89850"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/main_agent.py",
+      "sha256": "f68055c51aaa424d0ec9927d30ec4ae3328fb257f4245fe6b4718f2ea578371e"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/prompts/__init__.py",
+      "sha256": "265cb1ff3859b4eec424b0ba9310f5670bd8c4ac7b432e177cba20723dde5ecc"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/prompts/gaia.py",
+      "sha256": "cca3bfe976f12c03e36250d3e2630aa3e556122037231afcc3b1dd5f91e33700"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/prompts/omnigaia.py",
+      "sha256": "4866a46d78a6b37f71d6e4011482b4cc9a1868787c3641ebbb8f0d4c08c839bf"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/runners/__init__.py",
+      "sha256": "d4df8ea9d3d5c412c0de0c2d3e54c73d905206005fb88b1085759b7ccf3f0c04"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/runners/gaia_runner.py",
+      "sha256": "8a2c975911e448773c081576a70004b4b7a7e7c7f7004e96889df9fe8613b1c8"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/runners/omnigaia_runner.py",
+      "sha256": "dd11eb760b3a9086efdf4e8f9bbacd2ec94ac5fb9a9031409a758b9ef268135e"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/sub_agent.py",
+      "sha256": "9d3531f6e299876aac4e6cfce00b2a130efa188d059064704c244d8e916720b5"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/subagents/__init__.py",
+      "sha256": "c5a4a2cb30a4b14a7058e15dcb138116e190a0f2dffb3ba448b5eb30b217e36a"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/subagents/react_agent.py",
+      "sha256": "142e590cee7b4e9c3beb3c437e0e29d79f6c902bda42a08c31353c6f88a475d2"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/tools/__init__.py",
+      "sha256": "84c73f032161b6045936cc243f1a3a916ded776ee8941a2f0814ee69ed5856d4"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/tools/complete.py",
+      "sha256": "713027fa76612f1daac85272a71bf56f3c54c80a43a7c29cc06be3ede88c5162"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/tools/delegate.py",
+      "sha256": "b818cb7a35a3a05212368ee6708fc2c920482881c0b87d06bb0cade63d0eb337"
+    },
+    {
+      "path": "livecodebench/framework/orchestra_o1/tools/trace_formatter.py",
+      "sha256": "deab861573cc35e8a7e60c3c0ba5929f85f4e1fc5b724cd4861b474040523241"
+    },
+    {
+      "path": "livecodebench/lcb_judge.py",
+      "sha256": "43c95b841e93b735f9584624ffe224268c8d39f04df0a1f7df00bf091ad96820"
+    },
+    {
+      "path": "livecodebench/lcb_team_base.py",
+      "sha256": "8d8676fe52ad55e08da74986a362b949fd20b72a3987debbbaab2cd08870d971"
+    },
+    {
+      "path": "livecodebench/README.md",
+      "sha256": "803676e8d9f71b836e2652180f39a34b5a0b92b9a0368a7733662269a2903653"
+    },
+    {
+      "path": "livecodebench/requirements.txt",
+      "sha256": "a49fbd175df6f7abfee73f180f5e71c173b370b3082c74314dbd4e155eb9d1b1"
+    },
+    {
+      "path": "livecodebench/run.sh",
+      "sha256": "d159d8cfce28563f03b7628b5528c39d8737c7348b68bd3148c4ad0942ede445"
+    },
+    {
+      "path": "livecodebench/run_lcb_o1.py",
+      "sha256": "bc1cd239ba2519e0d6cfa30254b3f11f87cd4e6ad4974c97375549c8cee1babd"
+    },
+    {
+      "path": "livecodebench/shared/share_settings.py",
+      "sha256": "019d4e8909cec4bd6b1da0b411205a738352725e0bd3c672c37cc390294604a7"
+    },
+    {
+      "path": "livecodebench/testing_util.py",
+      "sha256": "b7cb6a8a69807bb868150a61742e25d7bb5328bbe01d514471b6ec43c9fa9ed2"
+    },
+    {
+      "path": "livecodebench/token_gate_selftest.py",
+      "sha256": "1841b39b4b0e6462062cb2b3c98c149270028a21722c386adb9dc6db63a16cb6"
     },
     {
       "path": "README.md",
-      "source": "new share helper",
-      "sha256": "19d95e52694114d66cbf0d750b51d4323d2abfa00314ff2333f8cfb6a1949c99"
+      "sha256": "8487889a073c8649c5818f232f4e07c4ea9ac56ba20f9433cb2c0e49d5e55764"
     }
   ]
 }
