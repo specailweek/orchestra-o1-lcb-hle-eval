@@ -10,12 +10,24 @@
       "sha256": "92c2416f5bc0e347f485a333edd8bb4e66f3d98f5cf75ddaeb342c397ff91f45"
     },
     {
+      "path": "README.md",
+      "sha256": "833cd44cdda16e724bae3e6ecc8db7d3e9215dc290c48abb65dc0b121e5fff17"
+    },
+    {
       "path": "hle/.env.example",
       "sha256": "86b60018813debe283d750ff61e6eb6ec6be36afc1e0bab028c2854c9968f177"
     },
     {
       "path": "hle/Dockerfile.tools",
       "sha256": "029b83a46d3323dfe2594746d4372b2cecd3194a934cd655f7964a53dee89cf2"
+    },
+    {
+      "path": "hle/README.md",
+      "sha256": "e75492ce0c429961be87721f1f723411a251cbe7b449c71a2d7e9376def212da"
+    },
+    {
+      "path": "hle/SETUP.md",
+      "sha256": "2d3ba4ce3d4d39bad6d99e717325680d4d4318c7ad0826ad465f7c160b94ddd0"
     },
     {
       "path": "hle/framework/base/__init__.py",
@@ -170,10 +182,6 @@
       "sha256": "dce914a00ffc649021b565fd3325376095f8d79f5fa669157fc296f00692f2e7"
     },
     {
-      "path": "hle/README.md",
-      "sha256": "2d3ba4ce3d4d39bad6d99e717325680d4d4318c7ad0826ad465f7c160b94ddd0"
-    },
-    {
       "path": "hle/requirements.txt",
       "sha256": "a49fbd175df6f7abfee73f180f5e71c173b370b3082c74314dbd4e155eb9d1b1"
     },
@@ -200,6 +208,14 @@
     {
       "path": "livecodebench/Dockerfile.tools",
       "sha256": "029b83a46d3323dfe2594746d4372b2cecd3194a934cd655f7964a53dee89cf2"
+    },
+    {
+      "path": "livecodebench/README.md",
+      "sha256": "b9dbaf9df0b731b341c30d8e01de25dae9f592a1544e471a318cfd81341b966a"
+    },
+    {
+      "path": "livecodebench/SETUP.md",
+      "sha256": "2a4b5508459d3ccc1349e96db4b5ae746410f282f2c8009abc5cf8bce44a9b1c"
     },
     {
       "path": "livecodebench/framework/base/__init__.py",
@@ -346,10 +362,6 @@
       "sha256": "8d8676fe52ad55e08da74986a362b949fd20b72a3987debbbaab2cd08870d971"
     },
     {
-      "path": "livecodebench/README.md",
-      "sha256": "2a4b5508459d3ccc1349e96db4b5ae746410f282f2c8009abc5cf8bce44a9b1c"
-    },
-    {
       "path": "livecodebench/requirements.txt",
       "sha256": "a49fbd175df6f7abfee73f180f5e71c173b370b3082c74314dbd4e155eb9d1b1"
     },
@@ -372,10 +384,6 @@
     {
       "path": "livecodebench/token_gate_selftest.py",
       "sha256": "1841b39b4b0e6462062cb2b3c98c149270028a21722c386adb9dc6db63a16cb6"
-    },
-    {
-      "path": "README.md",
-      "sha256": "a2b96d59b957d73293dc5184628a46ab878124b6e4eb498154a49509e8c22153"
     }
   ]
 }
